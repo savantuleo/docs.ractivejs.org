@@ -160,3 +160,15 @@ ractive.on( 'showMenu', function ( event ) {
   // show menu at client coordinates event.x, event.y
 });
 ```
+You can attach  the event to a single Ractive instance
+```js
+ractive = new Ractive({
+  el: myContainer,
+  template: myTemplate,
+  events:{
+    menu:function(node,fire){
+      //event code 
+    }
+  }
+});
+```
